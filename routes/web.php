@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('index');
+//});
+Route::get('/', 'Index\IndexController@index');
+Route::get('/login', 'Index\IndexController@login');
+Route::get('/zc', 'Index\IndexController@zc');
+Route::post('/zcdo', 'Index\IndexController@zcdo');
+Route::post('/logindo', 'Index\IndexController@logindo');
+Route::get('/tc', 'Index\IndexController@tc');
+
+
